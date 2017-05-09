@@ -1,0 +1,22 @@
+{
+  "name": "volta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrigarza/volta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrigarza/volta/issues"
+  },
+  "homepage": "https://github.com/jrigarza/volta#readme",
+  "dependencies": {
+    "firebase": "^3.9.0"
+  }
+}

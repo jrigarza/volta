@@ -1,0 +1,24 @@
+<script src="run.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAirjqZJkv7DQd34kNqJBEzYPOqKh_Izhg",
+    authDomain: "volta-65a31.firebaseapp.com",
+    databaseURL: "https://volta-65a31.firebaseio.com",
+    projectId: "volta-65a31",
+    storageBucket: "volta-65a31.appspot.com",
+    messagingSenderId: "644848488508"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<body onload="geoFindMe()">
+<!--<p><button onclick="geoFindMe()">Show my location</button></p>-->
+<div id="outLocation"></div>
+Enter report:<input type="text" id="report"><br>
+<!--<input type="submit" value="Submit" onclick="getReport()"><br>-->
+<div id="outReport"></div>
+<input type="submit" value="Save" onclick="writeUserReport()"><br>
+
+
