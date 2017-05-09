@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+{
+=======
 {  
+>>>>>>> 6856a17d825e46599154ea28f27316d5ee375b05
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
       "properties": {},
       "geometry": {
+<<<<<<< HEAD
+        "type": "Point",
+        "coordinates": [
+          0.12256622314453125,
+          6.382006516321518
+=======
         "type": "Polygon",
         "coordinates": [
           [
@@ -385,8 +395,13 @@
               6.324128030947969
             ]
           ]
+>>>>>>> 6856a17d825e46599154ea28f27316d5ee375b05
         ]
       }
     }
   ]
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 6856a17d825e46599154ea28f27316d5ee375b05
