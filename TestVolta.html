@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title></title>
+  <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; }
+    .map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<div id='map-one' class='map'> </div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoienVwYXphcGEiLCJhIjoiY2oyZmRncjVrMDZrNzMzczVkYjcyZGJkNSJ9.weniJRJDEA3ARqYMAn4x6Q';
+
+var geojsonData;
+// = 
+// {
+//   "type": "FeatureCollection",
+//   "features": [
+//     {
+//       "type": "Feature",
+//       "properties": {},
+//       "geometry": {
+//         "type": "Point",
+//         "coordinates": [
+//           0.12256622314453125,
+//           6.382006516321518
+//         ]
+//       }
+//     }
+//   ]
+// };
+
+var map = L.mapbox.map('map-one', 'mapbox.satellite').setView([6.38313, 0.12477], 13);
+
+// map.addSource('report', {
+//     type: 'geojson',
+//     data: 'data.geojson'
+// });
+//
+
+// map.on('load', function () {
+
+//     map.addLayer({
+//         "id": "points",
+//         "type": "symbol",
+//         "source": {
+//             "type": "geojson",
+//             "data": MyGeoJson
+//         },
+//         "layout": {
+//             "icon-image": "{icon}-15",
+//             "text-field": "{title}",
+//             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+//             "text-offset": [0, 0.6],
+//             "text-anchor": "top"
+//         }
+//     });
+
+
+$.getJSON('data.geojson', function (results) {
+    // Assign the results to the geojsonData variable
+    geojsonData = results;
+    // Assign the data to the layer
+    //featureLayer.setGeoJSON(geojsonData);
+});
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
+myLayer.setGeoJSON(geojsonData);
+
+</script>
+</body>
+</html>
